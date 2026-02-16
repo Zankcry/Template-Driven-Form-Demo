@@ -1,0 +1,48 @@
+<h2>{{ title }}</h2>
+
+<form (ngSubmit)="onSubmit()" #myForm="ngForm">
+
+  <input
+    class="input-box"
+    type="text"
+    name="username"
+    [(ngModel)]="username"
+    placeholder="Enter username"
+    required>
+
+  <input
+    class="input-box"
+    type="email"
+    name="email"
+    [(ngModel)]="email"
+    placeholder="Enter email"
+    required
+    email>
+
+  <input
+    class="input-box"
+    type="password"
+    name="password"
+    [(ngModel)]="password"
+    placeholder="Enter password"
+    required
+    minlength="6">
+
+  <select
+    class="input-box"
+    name="role"
+    [(ngModel)]="role"
+    required>
+    <option value="" disabled selected>Select role</option>
+    <option value="admin">Admin</option>
+    <option value="user">User</option>
+    <option value="guest">Guest</option>
+  </select>
+
+  <input
+    class="btn"
+    type="submit"
+    value="Submit"
+    [disabled]="!myForm.valid">
+
+</form>
