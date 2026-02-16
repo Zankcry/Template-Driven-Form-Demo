@@ -44,3 +44,76 @@ form {
   background-color: #ccc;
   cursor: not-allowed;
 }
+
+.radio-group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.radio-label {
+  font-weight: 600;
+  color: #333;
+  margin-right: 0.25rem;
+}
+
+.radio-option {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 1rem;
+  color: #444;
+  cursor: pointer;
+}
+
+.radio-option input[type="radio"] {
+  accent-color: #4a90d9;
+  cursor: pointer;
+}
+
+textarea.input-box {
+  resize: vertical;
+  font-family: inherit;
+}
+
+.output-section {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.output-section h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: #333;
+  font-size: 1.25rem;
+}
+
+.output-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.output-table th,
+.output-table td {
+  text-align: left;
+  padding: 0.6rem 0.75rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.output-table th {
+  background-color: #4a90d9;
+  color: #fff;
+  font-weight: 600;
+}
+
+.output-table tr:last-child td {
+  border-bottom: none;
+}
+
+.output-table tr:hover td {
+  background-color: #eef4fb;
+}

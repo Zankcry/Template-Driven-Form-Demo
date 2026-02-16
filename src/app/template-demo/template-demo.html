@@ -38,7 +38,35 @@
     <option value="user">User</option>
     <option value="guest">Guest</option>
   </select>
+  <div class="radio-group">
+    <label class="radio-label">Gender:</label>
+    <label class="radio-option">
+      <input type="radio" name="gender" [(ngModel)]="gender" value="male" required> Male
+    </label>
+    <label class="radio-option">
+      <input type="radio" name="gender" [(ngModel)]="gender" value="female" required> Female
+    </label>
+    <label class="radio-option">
+      <input type="radio" name="gender" [(ngModel)]="gender" value="other" required> Other
+    </label>
+  </div>
 
+  <div class="radio-group">
+    <label class="radio-label">Status:</label>
+    <label class="radio-option">
+      <input type="radio" name="status" [(ngModel)]="status" value="permanent" required> Permanent
+    </label>
+    <label class="radio-option">
+      <input type="radio" name="status" [(ngModel)]="status" value="probationary" required> Probationary
+    </label>
+  </div>
+
+  <textarea
+    class="input-box"
+    name="comments"
+    [(ngModel)]="comments"
+    placeholder="Enter comments / notes"
+    rows="4"></textarea>
   <input
     class="btn"
     type="submit"
@@ -46,3 +74,41 @@
     [disabled]="!myForm.valid">
 
 </form>
+
+<div class="output-section" *ngIf="submitted">
+  <h3>Submitted Data</h3>
+  <table class="output-table">
+    <tr>
+      <th>Field</th>
+      <th>Value</th>
+    </tr>
+    <tr>
+      <td>Username</td>
+      <td>{{ username }}</td>
+    </tr>
+    <tr>
+      <td>Email</td>
+      <td>{{ email }}</td>
+    </tr>
+    <tr>
+      <td>Password</td>
+      <td>{{ password }}</td>
+    </tr>
+    <tr>
+      <td>Role</td>
+      <td>{{ role }}</td>
+    </tr>
+    <tr>
+      <td>Gender</td>
+      <td>{{ gender }}</td>
+    </tr>
+    <tr>
+      <td>Status</td>
+      <td>{{ status }}</td>
+    </tr>
+    <tr>
+      <td>Comments</td>
+      <td>{{ comments || 'N/A' }}</td>
+    </tr>
+  </table>
+</div>
